@@ -1,0 +1,35 @@
+.table_header_inner_container {
+    height: 70px;
+    background-color: #edb820;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+    display: flex;
+    align-items: center;
+}
+
+.table_header_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+
+.table_header_container p {
+    color: #1D202F;
+    width: calc(100% / 4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-left: 2px solid #ffff;
+    height: 75%;
+    text-align: center;
+
+}
+
+.table_header_container p:first-child {
+    border-left: 1px solid transparent;
+
+}

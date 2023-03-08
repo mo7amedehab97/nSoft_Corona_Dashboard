@@ -1,0 +1,36 @@
+.countries_list_container {
+    height: auto;
+    width: 100%;
+    padding: 60px 0;
+    background-color: #1D202F;
+}
+
+.countries_list_heading {
+
+    font-weight: 700 !important;
+    font-family: Nunito;
+    text-align: center;
+    font-size: 2rem;
+    color: #edb820;
+
+}
+
+.Filtering {
+    height: 60px;
+    width: 60%;
+    margin: auto;
+    margin-top: 40px;
+}
+
+.Filtering input {
+    height: 100%;
+    width: 72%;
+    padding-left: 25px;
+}
+
+.Filtering .sortBy {
+    height: 100%;
+    width: calc(100% - 72% - 25px);
+    margin-left: 25px;
+    padding: 0 20px;
+}

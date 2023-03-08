@@ -1,0 +1,26 @@
+.worldStats_box {
+    width: 250px;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.totalNumbers {
+    font-size: 2.7rem;
+    color: white;
+    font-weight: 700 !important;
+
+
+}
+
+.about {
+    text-align: center;
+    color: rgba(255, 255, 255, .7);
+}
+.skeleton_left{
+    display: flex;
+    justify-content: center;
+    align-items: center ;
+}
