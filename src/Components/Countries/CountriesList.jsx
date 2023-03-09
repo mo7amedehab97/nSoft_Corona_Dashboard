@@ -35,7 +35,7 @@ const CountriesList = () => {
   };
 
   const filteredCountries = countries.filter((country) =>
-    country.Country.toLowerCase().includes(searchInput.toLowerCase())
+    country.Country.toLowerCase().includes(searchQuery.toLowerCase())
   );
 
   let sortedCountries;
@@ -70,11 +70,9 @@ const CountriesList = () => {
 
       <TableHeader />
 
-      {/* {this.state.countryDetails.length < 1 ? <Spinner /> : null}
-      {countriesList} */}
       <div className="country_list_outer_holder">
         {!loading
-          ? countries.map((cur, index) => (
+          ? sortedCountries.map((cur, index) => (
               <CountryComp
                 key={index}
                 countryCode={cur.CountryCode}
