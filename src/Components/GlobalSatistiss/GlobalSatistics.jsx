@@ -1,9 +1,10 @@
+import AnimatedNumber from "./AnimatedNumber";
 import "./index.css";
 
 const GlobalSatistics = ({ total, about }) => {
   return (
     <div className="worldStats_box">
-      <h1 className="totalNumbers">{total}</h1>
+      <AnimatedNumber n={Number(total)} />
       <p className="about">{about}</p>
     </div>
   );

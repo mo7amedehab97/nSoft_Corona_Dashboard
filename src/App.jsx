@@ -6,7 +6,7 @@ import CountriesList from "./Components/Countries/CountriesList";
 function App() {
   return (
     <>
-      <SkeletonTheme baseColor="rgba(0,0,0,.2)" highlightColor="#d1d1d1">
+      <SkeletonTheme baseColor="#dddd" highlightColor="rgba(0,0,0,.2 )">
         <Banner />
         <CountriesList />
       </SkeletonTheme>

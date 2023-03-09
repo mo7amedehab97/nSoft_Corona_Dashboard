@@ -9,7 +9,7 @@ const CardSkeleton = () => {
       </div>
       <br />
       <div className="skeleton_left">
-        <Skeleton width={70} height={20} />
+        <Skeleton width={120} height={20} />
       </div>
     </div>
   );

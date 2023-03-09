@@ -34,3 +34,89 @@
     margin-left: 25px;
     padding: 0 20px;
 }
+
+.country_list_outer_holder {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+/* country comp */
+
+.country_comp_container {
+    height: 90px;
+    width: 60%;
+    border-bottom: 1px solid lightgray;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+
+}
+
+.country_icon {
+    width: calc(100% /4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.country_flag {
+    width: 45px;
+    height: 45px;
+}
+
+.cases_details {
+    width: 75%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.country_flag a {
+    color: #edb820;
+    text-decoration: none;
+    background-color: transparent;
+    font-size: 1.2rem;
+}
+
+.country_flag p {
+    font-weight: 400;
+    font-size: 1rem;
+    color: #fff;
+}
+
+.country_flag p strong {
+    color: #edb820;
+}
+
+.Cases,
+.Deaths,
+.Recovered {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-left: 2px solid #fff;
+}
+
+/*  Skeleton styles */
+.country_skeleton_loader_container {
+    display: flex;
+    justify-content: center;
+    width: 60%;
+}
+
+.country_skeleton_holder {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 0 12px;
+}
+
+

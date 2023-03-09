@@ -4,11 +4,6 @@ import "./index.css";
 import axios from "axios";
 import CardSkeleton from "./CardSkeleton";
 
-function formatCompactNumber(number) {
-  const formatter = Intl.NumberFormat("en", { notation: "standard" });
-  return formatter.format(number);
-}
-
 const Banner = () => {
   const [data, setData] = useState({});
   const [loading, setLoading] = useState(false);
@@ -39,14 +34,14 @@ const Banner = () => {
       <div className="world_stats">
         {!loading
           ? Object.keys(data).map((key, index) => {
-              return <CardSkeleton />;
+              return <CardSkeleton key={key} />;
             })
           : Object.keys(data).map((key, index) => {
               return (
                 <GlobalSatistics
-                  key={index}
+                  key={key}
                   about={key}
-                  total={formatCompactNumber(Number(data[key]))}
+                  total={Number(data[key])}
                 />
               );
             })}
