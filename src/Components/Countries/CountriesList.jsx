@@ -15,7 +15,6 @@ const CountriesList = () => {
     fetch("https://api.covid19api.com/summary")
       .then((res) => res.json())
       .then((data) => {
-        console.log(data.Countries[0], "fjndjfnjdsn");
         setCountries(data.Countries);
         setTimeout(() => {
           setLoading(false);
@@ -24,7 +23,7 @@ const CountriesList = () => {
   }, []);
 
   useEffect(() => {
-    const filteredCountries = countries.filter((country) =>
+    const filteredCountries = countries?.filter((country) =>
       country.Country.toLowerCase().includes(searchQuery.toLowerCase())
     );
     setSearchedCountries(filteredCountries);
@@ -34,22 +33,20 @@ const CountriesList = () => {
     setSortBy(event.target.value);
   };
 
-  const filteredCountries = countries.filter((country) =>
+  const filteredCountries = countries?.filter((country) =>
     country.Country.toLowerCase().includes(searchQuery.toLowerCase())
   );
 
   let sortedCountries;
   if (sortBy === "highest") {
-    sortedCountries = filteredCountries.sort(
+    sortedCountries = filteredCountries?.sort(
       (a, b) => b.TotalConfirmed - a.TotalConfirmed
     );
   } else {
-    sortedCountries = filteredCountries.sort(
+    sortedCountries = filteredCountries?.sort(
       (a, b) => a.TotalConfirmed - b.TotalConfirmed
     );
   }
-
-  console.log("first fdnfdndfjngjdfngjfn", countries);
 
   return (
     <div className="countries_list_container">
@@ -72,7 +69,7 @@ const CountriesList = () => {
 
       <div className="country_list_outer_holder">
         {!loading
-          ? sortedCountries.map((cur, index) => (
+          ? sortedCountries?.map((cur, index) => (
               <CountryComp
                 key={index}
                 countryCode={cur.CountryCode}
@@ -84,7 +81,7 @@ const CountriesList = () => {
                 newRecovered={cur.NewRecovered}
               />
             ))
-          : countries.map((cur, index) => (
+          : countries?.map((cur, index) => (
               <CountrySkeletonLoading key={cur.ID} />
             ))}
       </div>
